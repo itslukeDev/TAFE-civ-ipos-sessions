@@ -1,20 +1,21 @@
-bottles = 99
-
-
-def bottlePlural(count: int):
-    plural = f"{'' if bottles == 1 else 's'}"
-    # 1 bottle, 99 bottles
+def bottle_plural(count: int) -> str:
+    plural = "" if count == 1 else "s"
     return f"{count} bottle{plural}"
 
 
-def takeOneDown():
-    global bottles
+def take_one_down(bottles: int) -> int:
     bottles -= 1
     print("Take one down, pass it around!")
+    return bottles
 
 
-while bottles > 0:
-    print(f"{bottlePlural(bottles)} of beer on the wall!")
-    print(f"{bottlePlural(bottles)} of beer!")
-    takeOneDown()
-    print(f"{bottlePlural(bottles)} of beer on the wall!\n")
+def sing_song(bottles: int):
+    while bottles > 0:
+        print(f"{bottle_plural(bottles)} of beer on the wall!")
+        print(f"{bottle_plural(bottles)} of beer!")
+        bottles = take_one_down(bottles)
+        print(f"{bottle_plural(bottles)} of beer on the wall!\n")
+
+
+# Start the song with 99 bottles
+sing_song(99)
