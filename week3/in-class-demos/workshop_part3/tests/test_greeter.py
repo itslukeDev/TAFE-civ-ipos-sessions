@@ -1,0 +1,11 @@
+from greeter import greet
+import unittest
+
+
+class Test_TestGreeting(unittest.TestCase):
+    def test_greets_hello_world(self):
+        self.assertEqual("Hello, World!", greet())
+
+
+if __name__ == "__main__":
+    unittest.main()
