@@ -1,7 +1,3 @@
-import setup
-
-setup.setup_path()
-
 import unittest
 from src.greeter import greet
 
