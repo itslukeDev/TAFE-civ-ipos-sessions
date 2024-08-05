@@ -1,4 +1,14 @@
 def add(a, b):
-    if not all(isinstance(i, (int, float)) for i in (a, b)):
-        raise TypeError("Both arguments must be int or float")
+    """Adds two values together
+
+    Args:
+        a (num):
+        b (num):
+
+    Returns:
+        num: result of the sum
+    """
+    if type(a) not in [int, float] or type(b) not in [int, float]:
+        return TypeError("")
+
     return a + b
