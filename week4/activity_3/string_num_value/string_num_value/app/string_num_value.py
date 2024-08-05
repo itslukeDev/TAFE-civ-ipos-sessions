@@ -22,8 +22,9 @@ class StringNumValue:
     is the sum of the values of each separate character. **This is not yet
     implemented and is part of the exercise!**
     """
-    def __init__(self, s=''):
-        self.s = s
+
+    def __init__(self, s=""):
+        self.string = s.lower()
 
     @property
     def value(self):
@@ -33,7 +34,8 @@ class StringNumValue:
 
         :return: The numeric value of the string
         """
-        return ord(self.s) - ord('0') if len(self.s) else 0
+
+        return ord(self.string) if len(self.string) else 0
 
     def set(self, s):
         """
@@ -41,7 +43,7 @@ class StringNumValue:
 
         :param s: String to write
         """
-        self.s = s
+        self.string = s
 
     def append(self, a):
         """
@@ -49,4 +51,4 @@ class StringNumValue:
 
         :param a: String to append
         """
-        self.s += a
+        self.string += a
