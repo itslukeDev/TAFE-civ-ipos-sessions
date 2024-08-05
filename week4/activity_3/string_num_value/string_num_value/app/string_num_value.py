@@ -24,16 +24,27 @@ class StringNumValue:
     """
 
     def __init__(self, s=""):
-        self.string = s.lower()
+        self.string = s
 
     @property
-    def value(self):
+    def getValue(self):
         """
         Calculate and return the value of the string based on the rules laid
         out in the docstring of the class.
 
         :return: The numeric value of the string
         """
+
+        ASCII_ALPHA_START = 96
+
+        output = 0
+
+        for char in self.string:
+            if char.isnumeric():
+                output += int(char)
+            if char.isalpha():
+                unicode
+                output += ord
 
         return ord(self.string) if len(self.string) else 0
 

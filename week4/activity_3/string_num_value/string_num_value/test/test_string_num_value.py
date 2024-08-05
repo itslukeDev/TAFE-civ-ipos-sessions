@@ -15,26 +15,27 @@ class TestStringNumValue(unittest.TestCase):
     try to add a few new test cases. It's okay if you can think of new
     functionality for the class (which you then also need to develop).
     """
+
     def setUp(self) -> None:
         """
         Prepare the test fixture. We can now reuse the "unit under test"
         across multiple tests, bearing in mind it will be initialised
         every time.
         """
-        self.uut = StringNumValue('')
+        self.uut = StringNumValue("")
 
     def test_unit_under_test_is_the_right_type(self):
         self.assertIsInstance(self.uut, StringNumValue)
 
     def test_empty_string_has_value_zero(self):
-        self.assertEqual(0, self.uut.value)
+        self.assertEqual(0, self.uut.getValue)
 
     def test_numeric_character_retains_its_value(self):
         # We can override the existing value of the object
-        self.uut.set('9')
+        self.uut.set("9")
 
         # Expected comes first, then the actual value
-        self.assertEqual(9, self.uut.value)
+        self.assertEqual(9, self.uut.getValue)
 
     def test_appending_a_single_character_should_return_its_value(self):
         # We use append to add a character to the initially empty string
@@ -55,5 +56,5 @@ class TestStringNumValue(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
