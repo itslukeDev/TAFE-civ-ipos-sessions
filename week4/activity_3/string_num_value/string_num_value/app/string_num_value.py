@@ -19,8 +19,7 @@ class StringNumValue:
     alphabet are converted. Any other characters count as 0.
 
     If a string contains multiple characters, the value of the entire string
-    is the sum of the values of each separate character. **This is not yet
-    implemented and is part of the exercise!**
+    is the sum of the values of each separate character.
     """
 
     def __init__(self, s=""):
@@ -35,31 +34,33 @@ class StringNumValue:
         :return: The numeric value of the string
         """
 
-        ASCII_ALPHA_START = 96
+        ASCII_LOWERCASE_OFFSET = ord("a") - 1
 
-        output = 0
+        total_value = 0
 
-        for char in self.string:
+        for char in self.string.lowercase:
             if char.isnumeric():
-                output += int(char)
+                total_value += int(char)
             if char.isalpha():
-                unicode
-                output += ord
+                char_value = ord(char) - ASCII_LOWERCASE_OFFSET
+                total_value += char_value
 
-        return ord(self.string) if len(self.string) else 0
+        return total_value
 
     def set(self, s):
-        """
-        Overwrite the value of the string.
+        """Overwrite the value of the string.
 
-        :param s: String to write
+        Args:
+            s (string): string to write
         """
+
         self.string = s
 
     def append(self, a):
-        """
-        Append a new string to the end of the existing string.
+        """Append a new string to the end of the existing string.
 
-        :param a: String to append
+        Args:
+            a (string): String to append
         """
+
         self.string += a
