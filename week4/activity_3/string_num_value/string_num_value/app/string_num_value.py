@@ -38,7 +38,7 @@ class StringNumValue:
 
         total_value = 0
 
-        for char in self.string.lowercase:
+        for char in self.string.lower():
             if char.isnumeric():
                 total_value += int(char)
             if char.isalpha():
