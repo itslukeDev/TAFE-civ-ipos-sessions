@@ -39,12 +39,20 @@ class TestStringNumValue(unittest.TestCase):
 
     def test_appending_a_single_character_should_return_its_value(self):
         # We use append to add a character to the initially empty string
+        self.uut.append("8")
+
+        self.assertEqual(8, self.uut.getValue)
         pass
 
     def test_appending_multiple_characters_should_return_combined_value(self):
+        self.uut.append("abc123")  # 1 + 2 + 3 + 1 + 2 + 3
+
+        self.assertEqual(12, self.uut.getValue)
         pass
 
     def test_unsupported_characters_should_not_count(self):
+        self.uut.set("���+�{����{�*^%*")  # Courtesy of unix's /dev/random
+        self.assertEqual(0, self.uut.getValue)
         pass
 
     def test_what_more_can_you_think_of_to_test(self):
