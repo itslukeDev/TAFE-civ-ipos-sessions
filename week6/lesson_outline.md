@@ -1,36 +1,52 @@
-# Goal: Down the rabbit hole we go. By the end of the lesson, students should understand various data structures, their Python equivalents, and their relevance in modern software development.
+# Session 6 – Intermediate Programming – Data Structures and Binary Search
 
-## Key terms: Lists, Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Sets, Hash Tables, User-defined data structures, Binary Search.
+## Lesson Goal
 
-## Performance criteria: ICTPRG443, 2.3, 2.4
+Down the rabbit hole we go. By the end of the lesson, students should understand various data structures, their Python equivalents, and their relevance in modern software development.
 
-1. Introduction to Data Structures
+## Key Terms
+
+- Lists
+- Arrays
+- Linked Lists
+- Stacks
+- Queues
+- Trees
+- Graphs
+- Sets
+- Hash Tables
+- User-defined data structures
+- Binary Search
+
+## Performance Criteria (ICTPRG443: 2.3, 2.4)
+
+### 1. Introduction to Data Structures
 
 - Define what a data structure is.
 - Explain their relevance to modern software development.
-- Give a brief overview of common data structures
+- Provide a brief overview of common data structures.
 
-2. Deep Dive into Selected Structures with Python
+### 2. Deep Dive into Selected Structures with Python
 
-- Lists and Arrays: Discuss their similarities, differences, and built-in Python implementations.
-- Linked Lists: Briefly touch on the concept of nodes and pointers.
-- Stacks and Queues: Use Python's collections.deque as an example.
-- Trees, DAGs, and Graphs: Introduction to the concepts and applications.
-- Sets and Hash Tables: Show Python's built-in set and dict, and their common use cases.
+- **Lists and Arrays:** Discuss similarities, differences, and Python implementations.
+- **Linked Lists:** Introduce the concept of nodes and pointers.
+- **Stacks and Queues:** Use Python's `collections.deque` as an example.
+- **Trees, DAGs, and Graphs:** Introduce concepts and applications.
+- **Sets and Hash Tables:** Demonstrate Python's built-in `set` and `dict` and their use cases.
 
-3. Introduction to Binary Search
+### 3. Introduction to Binary Search
 
-- Explain the idea behind binary search and its efficiency.
-- Code our favourite guessing game!
+- Explain the concept and efficiency of binary search.
+- Code a guessing game as an example.
 
-4. Python's Language-provided Facilities for Sorted Data Structures
+### 4. Python's Language-Provided Facilities for Sorted Data Structures
 
-- Show the use of sorted(), sort(), bisect module, etc.
-- Highlight Python’s flexibility and power in handling sorted structures.
+- Demonstrate the use of `sorted()`, `sort()`, and the `bisect` module.
+- Highlight Python’s flexibility in handling sorted structures.
 
-5. Short Activities
+### 5. Short Activities
 
-- Activity 1: Implement a basic stack using lists.
-- Activity 2: Create a number guessing game and a super powerful AI that optimally solves them.
+- **Activity 1:** Implement a basic stack using lists.
+- **Activity 2:** Create a number guessing game with an AI that optimally solves it.
 
-6. Work on KBA part 1 (90 min alloc)
+### 6. Work on KBA Part 1 (90 min Allocation)
