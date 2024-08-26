@@ -1,30 +1,34 @@
-'''A buggy Task Manager that provides an opportunity to debug code by both reasoning about it and stepping through using pdb.
+"""A buggy Task Manager that provides an opportunity to debug code by both reasoning about it and stepping through using pdb.
 
 The program has a number of bugs that are introduced one at a time. 
 
 The goal is to find and fix the bugs.
 
-Ensure you step through this program in pdb only to understand how the program works and to find the bugs.'''
+Ensure you step through this program in pdb only to understand how the program works and to find the bugs."""
 
 # Once debugged add some documentation examples to help the next programmer!
 
 import sys
-# import os
+import os
+
 
 def add_task(task):
-    task.append((task, False)) 
+    task.append((task, False))
+
 
 def mark_task_completed(tasks, index):
     if 0 <= index < len(tasks):
-        tasks[index] = True 
+        tasks[index] = True
     else:
         print("Invalid task index.")
 
+
 def delete_task(tasks, index):
     if 0 <= index < len(tasks):
-        tasks.remove(tasks[index]) 
+        tasks.remove(tasks[index])
     else:
         print("Invalid task index.")
+
 
 def list_tasks(tasks):
     if not tasks:
@@ -32,10 +36,12 @@ def list_tasks(tasks):
         return
 
     for index, task in enumerate(tasks):
-        print(f"{index}. {'[X]' if task else '[ ]'} {task[0]}") 
+        print(f"{index}. {'[X]' if task else '[ ]'} {task[0]}")
+
 
 def sort_tasks(tasks):
     tasks.sort(key=lambda x: x[0])
+
 
 def binary_search(tasks, target):
     low, high = 0, len(tasks) - 1
@@ -49,8 +55,11 @@ def binary_search(tasks, target):
             high = mid - 1
     return -1
 
+
 def main():
-    # import pdb; pdb.set_trace()
+    import pdb
+
+    # pdb.set_trace()
     tasks = []
 
     while True:
@@ -89,6 +98,7 @@ def main():
             sys.exit("Exiting program.")
         else:
             print("Invalid choice. Please try again.")
+
 
 if __name__ == "__main__":
     main()
