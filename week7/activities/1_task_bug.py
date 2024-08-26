@@ -12,8 +12,8 @@ import sys
 import os
 
 
-def add_task(task):
-    task.append((task, False))
+def add_task(tasks, task):
+    tasks.append((task, False))
 
 
 def mark_task_completed(tasks, index):
